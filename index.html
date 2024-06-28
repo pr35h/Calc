@@ -1,16 +1,97 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Test Extension</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
     <style>
-      body {
-        background-color: #121212;
-        color: white;
-        font-family: Arial, sans-serif;
+        body {
+            font-family: Consolas;
+            background-color: #121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .calculator {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .display {
+            width: 100%;
+            height: 40px;
+            background: #eee;
+            text-align: right;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .keys {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .keys button {
+            width: 100%;
+            padding: 20px;
+            font-size: 1.2em;
+            background: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .keys button:hover {
+            background: #ddd;
+        }
+        .keys button.operator {
+            background: #f9a825;
+            color: #fff;
+        }
+        .keys button.operator:hover {
+            background: #e68900;
+        }
+        .keys button.equals {
+            grid-column: span 2;
+            background: #2196f3;
+            color: #fff;
+        }
+        .keys button.equals:hover {
+            background: #1976d2;
+        }
     </style>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <p>test</p>
-  </body>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="keys">
+            <button>C</button>
+            <button>(</button>
+            <button>)</button>
+            <button class="operator">/</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="operator">*</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="operator">-</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="operator">+</button>
+            <button>0</button>
+            <button>.</button>
+            <button class="equals">=</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
 </html>

@@ -1,11 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "extension",
+  "name": "Simple Calculator",
   "version": "1.0",
-  "description": "hello, world",
-  "permissions": [
-    "activeTab"
-  ],
+  "description": "Made by pr35h",
+  "permissions": [],
   "action": {
     "default_popup": "index.html",
     "default_icon": {
@@ -16,5 +14,11 @@
   },
   "background": {
     "service_worker": "background.js"
-  }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["app.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
